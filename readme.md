@@ -14,7 +14,7 @@ Este proyecto es una aplicación de lector de puerto serie RS232 diseñada para 
 
 ## Notas adicionales
 
-- **Nota**: El sistema trabajo crea un servidor express en el puerto 3505
+- **Nota**: El sistema crea un servidor con express en el puerto 3505
 - **Puerto http**: 3505
 - **endpoint**: http://localhost:3505/get-data
 
