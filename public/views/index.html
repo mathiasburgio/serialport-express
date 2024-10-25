@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mateflix - Lector rs232</title>
+    <link rel="icon" href="/resources/icono.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/resources/font-awesome-6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/resources/font-awesome-6.6.0/css/brands.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/resources/adminlte/css/adminlte.min.css" />
+    <!-- <link rel="stylesheet" href="/resources/cdns/icheck-bootstrap/icheck-bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/resources/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">    
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body class="bg-white">
+    
+    <div class="container-fluid p-3">
+        <div class="alert alert-light">
+            <b>Lectura:</b><br>
+            <span name="lectura"></span>
+        </div>
+        <div class="form-group">
+            <label for="">Puerto</label>
+            <div class="input-group">
+                <select name="puerto" class="form-control">
+                    <option value="COM1" selected>COM1</option>
+                    <option value="COM2">COM2</option>
+                    <option value="COM3">COM3</option>
+                    <option value="COM4">COM4</option>
+                    <option value="COM5">COM5</option>
+                    <option value="COM6">COM6</option>
+                    <option value="COM7">COM7</option>
+                    <option value="COM8">COM8</option>
+                    <option value="COM9">COM9</option>
+                    <option value="COM10">COM10</option>
+                </select>
+                <input type="text" name="puerto2" class="form-control d-none">
+                <div class="input-group-append d-none">
+                    <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">Baudrate</label>
+            <select name="baudrate" class="form-control">
+                <option value="1200">1200</option>
+                <option value="2400">2400</option>
+                <option value="4800">4800</option>
+                <option value="9600" selected>9600</option>
+                <option value="14400">14400</option>
+                <option value="19200">19200</option>
+            </select>
+        </div>
+        <div class="form-group d-none">
+            <label for="">Intervalo de lectura</label>
+            <select name="intervaloLectura" class="form-control">
+                <option value="100" selected>0.1 seg</option>
+                <option value="200">0.2 seg</option>
+                <option value="500">0.5 seg</option>
+                <option value="1000">1 seg</option>
+                <option value="2000">2 seg</option>
+                <option value="5000">5 seg</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Modo lectura</label>
+            <select name="modoLectura" class="form-control">
+                <option value="mantener" selected>Mantener el último valor leido</option>
+                <option value="actualizar">Mostrar valor actual</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-block btn-success" name="conectar">Conectar</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-block btn-danger" disabled name="desconectar">Desconectar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Mateflix - Lector rs232
+        <br>
+        <code class="text-white">
+            GET http://localhost:3505/get-data
+        </code>
+    </footer>
+
+    <script src="/resources/jquery-3.7.1.min.js"></script>
+    <script src="/resources/bootstrap/js/popper.min.js"></script>
+    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/resources/adminlte/js/adminlte.min.js"></script>
+    <script src="/resources/sweetalert2/sweetalert2.all.min.js"></script>
+
+    <script src="/resources/Fechas.js"></script>
+    <script src="/resources/Modal.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

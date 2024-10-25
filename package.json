@@ -1,0 +1,51 @@
+{
+  "name": "serialport-express",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Mathias Burgio",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "serialport": "^12.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "build": {
+    "appId": "com.mateflix.rs232",
+    "productName": "Lector rs232",
+    "copyright": "Copyright © 2024 mateflix",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "public/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "./public/resources/icono.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Lector rs232"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8"
+  }
+}
