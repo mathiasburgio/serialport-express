@@ -45,7 +45,7 @@ expressApp.post("/connect", (req, res)=>{
             res.status(200).json({error: true, message: err.toString()});
         }else{
             serialPort.on('data', function (data) {
-                console.log(data);
+                //console.log(data);
                 let dataString = Buffer.from(data).toString('utf-8').trim();
                 if(req.body.modoLectura == "mantener"){
                     if(dataString != "") lastData = dataString; //actualiza el valor solo si tiene info
@@ -76,6 +76,8 @@ function createWindow() {
     width: 400,
     height: 600,
     icon: path.join(__dirname, 'public', 'resources', 'icono.ico'),
+    resizable: false,  // Deshabilita el cambio de tamaño
+    maximizable: (process?.env?.NODE_ENV == "development"), // Deshabilita la maximización
     webPreferences: {
         nodeIntegration: false,
         contextIsolation: false,
