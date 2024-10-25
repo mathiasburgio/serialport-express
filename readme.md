@@ -16,11 +16,11 @@ Este proyecto es una aplicación de lector de puerto serie RS232 diseñada para 
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/lector-puerto-serie-rs232.git
+   git clone https://github.com/mathiasburgio/serialport-express
 
 2. Navega al directorio del proyecto:  
     ```bash
-    cd lector-puerto-serie-rs232
+    cd serialport-express
 
 3. Instala las dependencias necesarias:  
     ```bash
