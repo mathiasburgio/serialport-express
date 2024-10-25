@@ -1,5 +1,6 @@
 class Index{
     constructor(){
+        this.ultimaLectura = "";
     }
     init(){
 
@@ -60,7 +61,18 @@ class Index{
             $.get({ url: "/get-data" })
             .then(ret=>{
                 //console.log(ret);
-                $("[name='lectura']").html(ret);
+                let alert = $(".alert");
+                alert.find("[name='lectura']").html(ret);
+                if(this.ultimaLectura != ret){
+                    if( alert.hasClass("alert-light") ){
+                        alert.addClass("alert-warning");
+                        alert.removeClass("alert-light");
+                    }else{
+                        alert.removeClass("alert-warning");
+                        alert.addClass("alert-light");
+                    }
+                }
+                this.ultimaLectura = ret;
             })
         },200);
     }
